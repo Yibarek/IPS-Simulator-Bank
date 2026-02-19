@@ -4,7 +4,7 @@ A Full-Stack Banking Simulation System which can be easly Integrated with EthSwi
 
 ---
 
-## 📌 Overview
+## Overview
 
 IPS Simulator Bank is a full-stack digital banking simulation system built using **React (Frontend)** and **Node.js + Express (Backend)**.
 
@@ -177,7 +177,7 @@ http://localhost:5000
 
 ---
 
-## 6️⃣ Start the Frontend
+## 6 Start the Frontend
 
 ```bash
 cd frontend
@@ -193,7 +193,7 @@ http://localhost:5173
 
 ---
 
-## 7️⃣ Open the Application
+## 7 Open the Application
 
 Open your browser and navigate to:
 
@@ -206,7 +206,7 @@ http://localhost:5173
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Yitbarek Wondatir**  
 Full-Stack Developer  
