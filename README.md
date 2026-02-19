@@ -141,7 +141,7 @@ CREATE DATABASE ips_simulator_bank;
 
 ## 3 Create Required Tables
 
-Run the SQL scripts provided in the `/database` folder  
+Run the SQL scripts provided in the `/database SQL` folder  
 or manually execute your table creation scripts before starting the backend.
 
 ---
