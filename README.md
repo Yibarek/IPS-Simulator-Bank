@@ -1,4 +1,4 @@
-# 🏦 IPS Simulator Bank
+# IPS Simulator Bank
 
 A Full-Stack Banking Simulation System which can be easly Integrated with EthSwitch IPS Use Cases  
 
@@ -30,15 +30,15 @@ This project is designed for learning, testing, and demonstrating IPS-related di
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 Frontend (React)  
-⬇
+⬇  
 Backend API (Express.js)  
-⬇
+⬇  
 Database (MySQL)  
 ⬇  
-Simulated IPS Processing Layer  
+Simulated IPS Processing Layer 
 
 ---
 
@@ -49,25 +49,25 @@ Simulated IPS Processing Layer
 - Create bank accounts
 - Fetch customer and account details
 
-### 💸 P2P Transfer
+###  P2P Transfer
 - Verify sender account
 - Verify receiver account
 - Save transaction record
 - Handle transaction status
 
-### 📩 Request to Pay (RTP)
+###  Request to Pay (RTP)
 - RTP initiation
 - RTP acceptance
 - RTP rejection
 - RTP cancellation
 - RTP status tracking
 
-### 📱 QR Payment
+###  QR Payment
 - QR payment simulation
 - Transaction validation
 - Record payment history
 
-### 🔁 Return Payment
+### Return Payment
 - Initiate return request
 - Reverse completed transactions
 - Update transaction state
@@ -88,7 +88,7 @@ Simulated IPS Processing Layer
 - RESTful APIs
 
 ### Database
-- SQL (Relational Database)
+- MySQL (Relational Database)
 
 ---
 
@@ -100,6 +100,11 @@ Simulated IPS Processing Layer
 
 ## 📂 Project Structure
 
+IPS-Simulator-Bank
+│
+├── client/ # React Frontend
+├── server/ # Express Backend
+└── database/ # SQL Scripts
 
 ---
 
