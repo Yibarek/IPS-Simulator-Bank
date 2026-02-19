@@ -1,6 +1,6 @@
 # 🏦 IPS Simulator Bank
 
-A Full-Stack Banking Simulation System Integrated with EthSwitch IPS Use Cases  
+A Full-Stack Banking Simulation System which can be easly Integrated with EthSwitch IPS Use Cases  
 
 ---
 
@@ -33,9 +33,9 @@ This project is designed for learning, testing, and demonstrating IPS-related di
 ## 🏗️ System Architecture
 
 Frontend (React)  
-⬇  
+⬇
 Backend API (Express.js)  
-⬇  
+⬇
 Database (MySQL)  
 ⬇  
 Simulated IPS Processing Layer  
@@ -103,3 +103,13 @@ Simulated IPS Processing Layer
 
 ## 📂 Project Structure
 
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Yibarek/IPS-Simulator-Bank.git
+cd IPS-Simulator-Bank
