@@ -44,7 +44,7 @@ Simulated IPS Processing Layer
 
 ## 🚀 Features – Phase 1
 
-### 👤 Customer & Account Management
+### Customer & Account Management
 - Create customers
 - Create bank accounts
 - Fetch customer and account details
@@ -101,6 +101,7 @@ Simulated IPS Processing Layer
 ## 📂 Project Structure
 
 IPS-Simulator-Bank
+
 │
 ├── client/ # React Frontend
 
