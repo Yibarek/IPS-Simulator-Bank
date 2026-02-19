@@ -10,11 +10,11 @@ IPS Simulator Bank is a full-stack digital banking simulation system built using
 
 The system simulates core use cases supported by the EthSwitch Instant Payment System (IPS), including:
 
-- 💸 Peer-to-Peer (P2P) Transfers  
-- 📩 Request to Pay (RTP)  
-- 📱 QR Payments  
-- 🔁 Return Payments  
-- 📊 Transaction Monitoring  
+- Peer-to-Peer (P2P) Transfers  
+- Request to Pay (RTP)  
+- QR Payments  
+- Return Payments  
+- Transaction Monitoring  
 
 This project is designed for learning, testing, and demonstrating IPS-related digital payment workflows.
 
