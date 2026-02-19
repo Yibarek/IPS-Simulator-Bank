@@ -95,9 +95,6 @@ Simulated IPS Processing Layer
 ## 🔐 Authentication
 
 - JWT-based authentication
-- Token verification middleware
-- Expiry validation
-- Protected routes
 
 ---
 
@@ -108,8 +105,29 @@ Simulated IPS Processing Layer
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1 Clone the Repository
 
 ```bash
 git clone https://github.com/Yibarek/IPS-Simulator-Bank.git
 cd IPS-Simulator-Bank
+
+### 2 create database
+
+### 3 create Tables
+
+### 4 Start the backend
+```bash
+cd backend
+npm install
+npm start
+
+### 5 Start the frontend
+```bash
+cd frontend
+npm install
+npm run dev
+
+### 6 open the portal
+```bash
+http://localhost/5173
+
