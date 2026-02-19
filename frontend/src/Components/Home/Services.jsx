@@ -372,7 +372,7 @@ function Services({ formState, setFormState, resetStates }) {
               <div className="cta-box">
                 <div className="row align-items-center">
                   <div className="col-lg-8">
-                    <h3>Automated Test</h3>
+                    <h3>Automated Testing</h3>
                     <p>
                       Click <b>start</b> to test every scenarios automatically. <b>Comming soon!</b> Automation development is in progress.
                     </p>

@@ -4765,6 +4765,12 @@ app.post("/callback", async (req, res) => {
       return match ? match[1] : null;
     }
 
+    function extractUETRValue(xml, parentTag, childTag) {
+      let regex = /<document:CdtTrfTxInf>[\s\S]*?<document:PmtId>[\s\S]*?<document:UETR>(.*?)<\/document:UETR>/;
+      let match = xml.match(regex);
+      return match ? match[1] : null;
+    }
+
     function extractEndToEndIdValue(xml) {
       let regex = /<document:CdtTrfTxInf>[\s\S]*?<document:PmtId>[\s\S]*?<document:EndToEndId>(.*?)<\/document:EndToEndId>/;
       let match = xml.match(regex);
@@ -4815,6 +4821,7 @@ app.post("/callback", async (req, res) => {
     
     // ******  Extract Required parameter value from the request   *******
     let OrgnlTxId = extractTxIdValue(pacs008Body);
+    let OrgnlUETR = extractUETRValue(pacs008Body);
     let OrgnlEndToEndId = extractEndToEndIdValue(pacs008Body);
     let OrgnlMsgId = extractTagValue(pacs008Body, "document:MsgId");
     let OrgnlBizMsgIdr = extractTagValue(pacs008Body, "header:BizMsgIdr");
@@ -4830,6 +4837,7 @@ app.post("/callback", async (req, res) => {
     let debitorName = extractDebitorNameValue(pacs008Body);
 
     console.log(`${formatDateWithOffset()} | DEBUG | ` + "OrgnlTxId: " + OrgnlTxId);
+    console.log(`${formatDateWithOffset()} | DEBUG | ` + "OrgnlUETR: " + OrgnlUETR);
     console.log(`${formatDateWithOffset()} | DEBUG | ` + "OrgnlEndToEndId: " + OrgnlEndToEndId);
     console.log(`${formatDateWithOffset()} | DEBUG | ` + "OrgnlMsgId: " + OrgnlMsgId);
     console.log(`${formatDateWithOffset()} | DEBUG | ` + "OrgnlBizMsgIdr: " + OrgnlBizMsgIdr);
@@ -4899,6 +4907,44 @@ app.post("/callback", async (req, res) => {
             OrgnlDebitorAdd: OrgnlDebitorAdd,
           }
         );
+        let txstatus = ''
+        if (errorcode == "ACSC") {
+          txstatus = "COMPLETED"
+        }else{
+          txstatus = "FAILED"
+        }
+        console.log("========================================")
+        console.log("========================================")
+        console.log("========================================")
+        console.log("OrgnlUETR : " + OrgnlUETR)
+        console.log("========================================")
+        console.log("========================================")
+        console.log("========================================")
+        if (OrgnlUETR){
+          // Record Transaction
+          try {
+            const response = await axios.post( 
+              "http://localhost:5000/recordTransaction",
+              {
+                txID: OrgnlTxId,
+                type: "P2P",
+                status: txstatus,
+                debitorBank: process.env.BIC,
+                debitorAccount: debitorAccount,
+                debitorName: debitorName,
+                creditorBank: creditorBank,
+                creditorAccount: creditorAccount,
+                creditorName: "creditorName",
+                amount: amount,
+                currency: "ETB",
+              }
+            );
+
+            console.log(`${formatDateWithOffset()} | DEBUG | ` + "RequestToPay Recorded to database : " + OrgnlUETR);
+          } catch (err) {
+            console.log(`${formatDateWithOffset()} | ERROR | ` + "Unable to register RequestToPay Record." + err);
+          }
+        }
 
         pushPaymentResponseBody = pacs002_signer_response.data;
         
