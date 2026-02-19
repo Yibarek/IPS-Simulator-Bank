@@ -108,31 +108,107 @@ IPS-Simulator-Bank
 
 ---
 
-## ⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 
-### 1 Clone the Repository
+Follow the steps below to run the project locally.
+
+---
+
+## 1 Clone the Repository
 
 ```bash
 git clone https://github.com/Yibarek/IPS-Simulator-Bank.git
 cd IPS-Simulator-Bank
+```
 
-### 2 create database
+---
 
-### 3 create Tables
+## 2 Create the Database
 
-### 4 Start the backend
+Create a new database in your local SQL server.
+
+Example (MySQL):
+
+```sql
+CREATE DATABASE ips_simulator_bank;
+```
+
+---
+
+## 3 Create Required Tables
+
+Run the SQL scripts provided in the `/database` folder  
+or manually execute your table creation scripts before starting the backend.
+
+---
+
+## 4 Configure Environment Variables
+
+Inside the `backend` folder, create a `.env` file and add:
+
+```
+PORT=5000
+DB_HOST=localhost
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_NAME=ips_simulator_bank
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## 5 Start the Backend
+
 ```bash
 cd backend
 npm install
 npm start
+```
 
-### 5 Start the frontend
+Backend runs at:
+
+```
+http://localhost:5000
+```
+
+---
+
+## 6️⃣ Start the Frontend
+
 ```bash
 cd frontend
 npm install
 npm run dev
+```
 
-### 6 open the portal
-```bash
-http://localhost/5173
+Frontend runs at:
 
+```
+http://localhost:5173
+```
+
+---
+
+## 7️⃣ Open the Application
+
+Open your browser and navigate to:
+
+```
+http://localhost:5173
+```
+
+---
+ 
+
+---
+
+## 👨‍💻 Author
+
+**Yitbarek Wondatir**  
+Full-Stack Developer  
+
+---
+
+## 📜 License
+
+This project is developed for educational and simulation purposes.
