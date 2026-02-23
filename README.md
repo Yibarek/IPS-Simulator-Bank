@@ -1,4 +1,4 @@
-# IPS Simulator Bank
+# Simulator Bank
 
 A Full-Stack Banking Simulation System which can be easly Integrated with IPS Use Cases  
 
