@@ -135,7 +135,7 @@ Create a new database in your local SQL server.
 Example (MySQL):
 
 ```sql
-CREATE DATABASE ips_simulator_bank;
+CREATE DATABASE simulatorbank;
 ```
 
 ---
@@ -156,8 +156,7 @@ PORT=5000
 DB_HOST=localhost
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
-DB_NAME=ips_simulator_bank
-JWT_SECRET=your_secret_key
+DB_NAME=simulatorbank
 ```
 
 ---
